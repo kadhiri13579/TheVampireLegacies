@@ -64,6 +64,16 @@ f:Button("Poena Yourself",function()
 	game:GetService("ReplicatedStorage").Events.CharacterSystems.Poena:FireServer(unpack(args))
 end)
 
+f:Button("Ictus Yourself",function()
+	local args = {
+		[1] = {
+			["Target"] = game:GetService("Players").LocalPlayer.Character.LeftUpperArm
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.CharacterSystems.Ictus:FireServer(unpack(args))
+end)
+
 m:DestroyGui()
 
 syn.request({
