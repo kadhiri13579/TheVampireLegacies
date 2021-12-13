@@ -40,6 +40,50 @@ m:Button("Respawn",function()
 	game:GetService("ReplicatedStorage").Events.PlayerDeath:FireServer(unpack(args))
 end)
 
+m:Button("Strangle Random (VERY BUGY)",function()
+    for _,v in pairs(game.Players:GetChildren()) do
+        if v.Name ~= game.Players.LocalPlayer.Name then
+            local args = {
+    [1] = {
+        ["Incant"] = "strangulo ventus",
+        ["Target"] = v.Character
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.WitchSpell:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = {
+        ["Incant"] = "ad somnum",
+        ["Target"] = v.Character
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.WitchSpell:FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["Incant"] = "silencio",
+        ["Target"] = v.Character
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.WitchSpell:FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["Incant"] = "immobilus",
+        ["Target"] = v.Character
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.WitchSpell:FireServer(unpack(args))
+        end
+    end
+end)
+
 m:Button("Infinite Yield",function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
