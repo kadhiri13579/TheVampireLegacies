@@ -40,6 +40,29 @@ m:Button("Respawn",function()
 	game:GetService("ReplicatedStorage").Events.PlayerDeath:FireServer(unpack(args))
 end)
 
+m:Button("Strangle Someone Around You",function()
+		for _,v in pairs(game.Players:GetChildren() do
+			local args = {
+    	[1] = {
+        		["Incant"] = "strangulo ventus",
+        		["Target"] = v.Character
+    		}
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.WitchSpell:FireServer(unpack(args))
+				
+				local args = {
+    	[1] = {
+        		["Incant"] = "ad somnum",
+        		["Target"] = v.Character
+    		}
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.WitchSpell:FireServer(unpack(args))
+		end
+
+end)
+
 m:Button("Infinite Yield",function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
