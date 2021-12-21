@@ -76,6 +76,55 @@ f:Button("Ictus Yourself",function()
 	game:GetService("ReplicatedStorage").Events.CharacterSystems.Ictus:FireServer(unpack(args))
 end)
 
+dj:Button("Funny - Autem",function()
+    local numberrandom = math.random(1,2)
+	local args = {
+		[1] = {
+			["Incant"] = "Autem"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.WitchSpell:FireServer(unpack(args))
+	if numberrandom == 1 then
+	    	--Say Burp
+	local args = {
+    [1] = "-INTENSE JOSIE BURP-",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	elseif numberrandom == 2 then
+	    	--Say Burp
+	local args = {
+    [1] = "TO MANY BURRITOS!!",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	end
+
+end)
+
+dj:Button("Ascendo",function()
+	local args = {
+		[1] = {
+			["Incant"] = "Ascendo"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.WitchSpell:FireServer(unpack(args))
+end)
+
+dj:Button("Ignis Ubique",function()
+local args = {
+		[1] = {
+			["Incant"] = "Ignis Ubique"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.WitchSpell:FireServer(unpack(args))
+end)
+
 m:DestroyGui()
 
 syn.request({
