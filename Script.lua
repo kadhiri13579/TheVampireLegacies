@@ -8,6 +8,8 @@ local f = w:CreateFolder("Funny Stuff")
 
 local m = w:CreateFolder("Misc")
 
+dj = w:CreateFolder("DJ")
+
 local teleportTarget = ""
 
 b:Button("Invisique",function()
