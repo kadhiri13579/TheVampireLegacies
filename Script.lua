@@ -10,8 +10,6 @@ local m = w:CreateFolder("Misc")
 
 dj = w:CreateFolder("DJ")
 
-local teleportTarget = ""
-
 b:Button("Invisique",function()
 	local args = {
 		[1] = {
@@ -103,6 +101,16 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 	end
 
+end)
+
+dj:Button("Autem",function()
+	local args = {
+		[1] = {
+			["Incant"] = "Autem"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.WitchSpell:FireServer(unpack(args))
 end)
 
 dj:Button("Ascendo",function()
