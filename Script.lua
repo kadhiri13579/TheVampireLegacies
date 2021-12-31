@@ -8,6 +8,8 @@ local f = w:CreateFolder("Funny Stuff")
 
 local m = w:CreateFolder("Misc")
 
+local buy = w:CreateFolder("Buy")
+
 dj = w:CreateFolder("DJ")
 
 b:Button("Invisique",function()
@@ -44,6 +46,14 @@ m:Button("Infinite Yield",function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+m:Button("Get Cure",function()
+    if fireclickdetector then
+        fireclickdetector(game:GetService("Workspace").Model.Cure.ClickDetector)
+    else
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(780.05395507812, -12.105807304382, -56.558815002441)
+    end
+end)
+
 f:Button("Punch yourself",function()
     local args = {
     [1] = {
@@ -72,6 +82,46 @@ f:Button("Ictus Yourself",function()
 	}
 
 	game:GetService("ReplicatedStorage").Events.CharacterSystems.Ictus:FireServer(unpack(args))
+end)
+
+buy:Button("Wood Stake",function()
+    if fireclickdetector then
+        fireclickdetector(game:GetService("Workspace").StakesRegisters.WoodenStake.ClickDetector)
+    else
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-57.76725769043, 85.602630615234, -276.69378662109)
+    end
+end)
+
+buy:Button("White Oak Stake",function()
+    if fireclickdetector then
+        fireclickdetector(game:GetService("Workspace").StakesRegisters.WhiteOakStake.ClickDetector)
+    else
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-57.76725769043, 85.602630615234, -276.69378662109)
+    end
+end)
+
+buy:Button("3 Use White Oak Stake",function()
+    if fireclickdetector then
+        fireclickdetector(game:GetService("Workspace").StakesRegisters['3UseWhiteOakStake'].ClickDetector)
+    else
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-57.76725769043, 85.602630615234, -276.69378662109)
+    end
+end)
+
+buy:Button("Golden Arrow",function()
+    if fireclickdetector then
+        fireclickdetector(game:GetService("Workspace").StakesRegisters.GoldenArrow.ClickDetector)
+    else
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-57.76725769043, 85.602630615234, -276.69378662109)
+    end
+end)
+
+buy:Button("Vervain Syringe",function()
+    if fireclickdetector then
+        fireclickdetector(game:GetService("Workspace").StakesRegisters.VervainSyringe.ClickDetector)
+    else
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-57.76725769043, 85.602630615234, -276.69378662109)
+    end
 end)
 
 dj:Button("Funny - Autem",function()
